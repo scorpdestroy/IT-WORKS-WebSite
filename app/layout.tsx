@@ -6,8 +6,8 @@ import { Footer } from "@/components/layout/footer"
 import { siteConfig } from "@/lib/site-config"
 import "./globals.css"
 
-const _inter = Inter({ subsets: ["latin", "cyrillic"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" })
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
   title: {
@@ -69,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={siteConfig.language}>
-      <body className="font-sans antialiased">
+      <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />
