@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 
 import { Hero } from "@/components/sections/hero"
 import { Section } from "@/components/sections/section"
@@ -7,7 +8,6 @@ import { FeatureGrid } from "@/components/sections/feature-grid"
 import { CaseGrid } from "@/components/sections/case-grid"
 import { Faq } from "@/components/sections/faq"
 import { JsonLd } from "@/components/seo/json-ld"
-import { LeadForm } from "@/components/forms/lead-form"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -250,11 +250,7 @@ export default function PyrusLandingPage() {
       />
 
       {/* Cases */}
-      <CaseGrid
-        title="Кейсы внедрения Pyrus"
-        description="Примеры сценариев внедрения с измеримым эффектом"
-        cases={cases}
-      />
+      <CaseGrid title="Кейсы внедрения Pyrus" description="Примеры сценариев внедрения с измеримым эффектом" cases={cases} />
 
       {/* Why us */}
       <Section title="Почему выбирают нашу команду?" description="Подход, который снижает риски и даёт быстрый результат" className="bg-muted">
@@ -295,14 +291,30 @@ export default function PyrusLandingPage() {
       {/* FAQ */}
       <Faq title="FAQ по внедрению Pyrus" items={faqItems} />
 
-      {/* Lead form */}
+      {/* Pyrus external form */}
       <Section
         title="Запросить пилотный процесс"
         description="Оставьте заявку — предложим сценарий пилота и оценим сроки. Ответим в рабочее время."
         className="bg-muted"
       >
-        <div className="mx-auto max-w-2xl">
-          <LeadForm />
+        {/* Якорь для CTA (#form) */}
+        <div className="mx-auto max-w-3xl" id="form">
+          {/* Контейнер формы Pyrus */}
+          <div
+            id="formHolder"
+            data-width="720px"
+            className="mx-auto rounded-2xl border border-border bg-card p-6"
+          />
+
+          <Script id="pyrus-external-form" strategy="afterInteractive">
+            {`(function(){
+  var f='externalFormStarterCallback', s=document.createElement('script');
+  window[f]=function(h){ h.bind(document.getElementById('formHolder')); };
+  s.type='text/javascript'; s.async=1;
+  s.src='https://pyrus.com/js/externalformstarter?jsonp='+f+'&id=2391503';
+  document.head.appendChild(s);
+})()`}
+          </Script>
         </div>
       </Section>
     </>
