@@ -1,15 +1,11 @@
 services:
   app:
+    env_file:
+      - .env.production
     build: .
     restart: unless-stopped
     environment:
       NODE_ENV: production
-      # IMPORTANT: заполни в .env.production на сервере
-      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
-      NEXT_PUBLIC_CONTACT_EMAIL: ${NEXT_PUBLIC_CONTACT_EMAIL}
-      NEXT_PUBLIC_CONTACT_PHONE: ${NEXT_PUBLIC_CONTACT_PHONE}
-      NEXT_PUBLIC_CONTACT_TELEGRAM: ${NEXT_PUBLIC_CONTACT_TELEGRAM}
-      NEXT_PUBLIC_CONTACT_TELEGRAM_URL: ${NEXT_PUBLIC_CONTACT_TELEGRAM_URL}
     networks:
       - web
 
