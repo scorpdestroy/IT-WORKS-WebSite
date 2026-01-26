@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 
@@ -202,6 +203,23 @@ export default function PyrusLandingPage() {
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
+
+      {/* Partner badge */}
+<div className="mx-auto max-w-6xl px-6 pt-6">
+<div className="flex items-center justify-end">
+<div className="flex items-center gap-3 rounded-2xl border border-border bg-card/60 px-4 py-2 backdrop-blur">
+<span className="text-xs font-medium text-muted-foreground">Партнёр</span>
+<Image
+src="/partners/pyrus-logo.png"
+alt="Pyrus"
+width={110}
+height={32}
+className="h-6 w-auto"
+priority
+/>
+</div>
+</div>
+</div>
 
       <Hero
         badge="Pyrus"
