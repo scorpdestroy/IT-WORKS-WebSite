@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react"
 
 interface HeroProps {
   title: string
+  /** Optional H2 under the main H1 for partner/SEO requirements */
+  subline?: string
   description: string
   showCta?: boolean
   ctaText?: string
@@ -13,6 +15,7 @@ interface HeroProps {
 
 export function Hero({
   title,
+  subline,
   description,
   showCta = true,
   ctaText = "Обсудить задачу",
@@ -29,6 +32,9 @@ export function Hero({
             </div>
           )}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">{title}</h1>
+          {subline && (
+            <h2 className="mt-4 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">{subline}</h2>
+          )}
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground lg:text-xl">{description}</p>
           {showCta && (
             <div className="mt-10">

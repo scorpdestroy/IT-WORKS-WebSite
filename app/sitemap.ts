@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
   const staticPages = [
     "",
+    "/pyrus",
     "/services",
     "/services/financial-consulting",
     "/services/automation",
