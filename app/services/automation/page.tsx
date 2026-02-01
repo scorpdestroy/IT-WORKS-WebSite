@@ -6,6 +6,7 @@ import { Faq } from "@/components/sections/faq"
 import { Cta } from "@/components/sections/cta"
 import { JsonLd } from "@/components/seo/json-ld"
 import { generateServiceSchema, generateFaqSchema } from "@/lib/seo"
+import { siteConfig } from "@/lib/site-config"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {

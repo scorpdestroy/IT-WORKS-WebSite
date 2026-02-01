@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { siteConfig } from "@/lib/site-config"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"

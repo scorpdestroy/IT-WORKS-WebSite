@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { siteConfig } from "@/lib/site-config"
 import { Hero } from "@/components/sections/hero"
 import { Section } from "@/components/sections/section"
 import { FeatureGrid } from "@/components/sections/feature-grid"
