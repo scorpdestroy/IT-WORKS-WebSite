@@ -44,7 +44,7 @@ export default function ContactsPage() {
     <>
       <Hero
         title="Обсудим вашу задачу"
-        description="Расскажите о вашей ситуации — мы предложим варианты решения и оценим сроки"
+        description="Расскажите о вашей ситуации - мы предложим варианты решения и оценим сроки"
         showCta={false}
       />
 
@@ -79,7 +79,7 @@ export default function ContactsPage() {
                 <div>
                   <p className="font-semibold text-foreground">Время ответа</p>
                   <p className="text-sm text-muted-foreground">
-                    Отвечаем на заявки в течение рабочего дня. В срочных случаях — пишите в Telegram.
+                    Отвечаем на заявки в течение рабочего дня. В срочных случаях - пишите в Telegram.
                   </p>
                 </div>
               </CardContent>

@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} — Финансовый консалтинг и автоматизация`,
+    default: `${siteConfig.name} - Финансовый консалтинг и автоматизация`,
     template: `%s | ${siteConfig.name}`,
   },
   description:
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Финансовый консалтинг и автоматизация`,
+    title: `${siteConfig.name} - Финансовый консалтинг и автоматизация`,
     description: "Профессиональный финансовый консалтинг и автоматизация бизнес-процессов для компаний России и СНГ.",
   },
   icons: {

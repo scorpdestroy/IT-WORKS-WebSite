@@ -59,7 +59,7 @@ git status || true
 git remote -v || true
 git log -1 --oneline || true
 
-# Если у тебя docker-compose.yml / compose.yml в другом месте — скажи/покажи путь.
+# Если у тебя docker-compose.yml / compose.yml в другом месте - скажи/покажи путь.
 ls -la docker-compose.yml compose.yml 2>/dev/null || true
 
 # =========================
@@ -68,7 +68,7 @@ ls -la docker-compose.yml compose.yml 2>/dev/null || true
 docker compose ps 2>/dev/null || true
 docker compose config 2>/dev/null | sed -n '1,200p' || true
 
-# Логи: сначала последние 200 строк (если сервисов много — всё равно присылай)
+# Логи: сначала последние 200 строк (если сервисов много - всё равно присылай)
 docker compose logs --no-color --tail=200 2>/dev/null || true
 
 # =========================
@@ -94,8 +94,8 @@ certbot certificates 2>/dev/null || true
 # =========================
 # 7) ЛОКАЛЬНАЯ ПРОВЕРКА ОТДАЧИ С СЕРВЕРА (важно)
 # =========================
-# Если твой сайт слушает, например, 3000 — это покажет.
-# Если не знаешь порт — по выводу ss/docker ps поймём.
+# Если твой сайт слушает, например, 3000 - это покажет.
+# Если не знаешь порт - по выводу ss/docker ps поймём.
 echo "=== Try localhost common ports ==="
 for p in 80 443 3000 8080; do
   echo "--- curl localhost:$p ---"

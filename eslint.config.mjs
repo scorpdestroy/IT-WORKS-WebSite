@@ -6,7 +6,7 @@ export default defineConfig([
   ...nextVitals,
   ...nextTs,
 
-  // если хочешь — добавь свои игноры/оверрайды:
+  // если хочешь - добавь свои игноры/оверрайды:
   globalIgnores([
     ".next/**",
     "out/**",

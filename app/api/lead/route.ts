@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     console.log("[LEAD]", {
       timestamp: new Date().toISOString(),
       name: data.name,
-      company: data.company || "—",
+      company: data.company || "-",
       email: data.email,
       message: data.message,
       ip,
