@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { Section } from "@/components/sections/section"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Согласие на обработку персональных данных",
-  description: "Условия согласия на обработку персональных данных IT Works.",
+  description: `Условия согласия на обработку персональных данных ${siteConfig.name}.`,
 }
 
 export default function DataProcessingPage() {
@@ -19,7 +20,7 @@ export default function DataProcessingPage() {
             1. Общие положения
           </h2>
           <p>
-            Настоящим я даю своё согласие IT Works (далее — «Оператор») на обработку моих персональных данных в
+            Настоящим я даю своё согласие {siteConfig.name} (далее — «Оператор») на обработку моих персональных данных в
             соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».
           </p>
 
@@ -64,8 +65,8 @@ export default function DataProcessingPage() {
           <p>
             Согласие действует до момента его отзыва путём направления письменного уведомления на адрес электронной
             почты Оператора:{" "}
-            <a href="mailto:privacy@itworks.consulting" className="text-foreground underline">
-              privacy@itworks.consulting
+            <a href={`mailto:${siteConfig.privacyEmail}`} className="text-foreground underline">
+              {siteConfig.privacyEmail}
             </a>
           </p>
           <p>
@@ -90,14 +91,14 @@ export default function DataProcessingPage() {
             7. Сведения об Операторе
           </h2>
           <p>
-            <strong>Наименование:</strong> IT Works
+            <strong>Наименование:</strong> {siteConfig.name}
             <br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:privacy@itworks.consulting" className="text-foreground underline">
-              privacy@itworks.consulting
+            <a href={`mailto:${siteConfig.privacyEmail}`} className="text-foreground underline">
+              {siteConfig.privacyEmail}
             </a>
             <br />
-            <strong>Телефон:</strong> +7 (495) 123-45-67
+            <strong>Телефон:</strong> {siteConfig.phone}
           </p>
         </div>
       </article>

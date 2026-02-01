@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { Section } from "@/components/sections/section"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Политика использования файлов cookie",
-  description: "Информация о том, как IT Works использует файлы cookie и аналогичные технологии.",
+  description: `Информация о том, как ${siteConfig.name} использует файлы cookie и аналогичные технологии.`,
 }
 
 export default function CookiesPage() {
@@ -92,8 +93,8 @@ export default function CookiesPage() {
           </h2>
           <p>
             По вопросам использования файлов cookie обращайтесь:{" "}
-            <a href="mailto:privacy@itworks.consulting" className="text-foreground underline">
-              privacy@itworks.consulting
+            <a href={`mailto:${siteConfig.privacyEmail}`} className="text-foreground underline">
+              {siteConfig.privacyEmail}
             </a>
           </p>
         </div>

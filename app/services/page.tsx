@@ -77,7 +77,7 @@ export default function ServicesPage() {
   const serviceSchema = generateServiceSchema(
     "Финансовый консалтинг и автоматизация",
     "Профессиональные услуги финансового консалтинга и автоматизации бизнес-процессов",
-    "https://itworks.consulting/services",
+    `${siteConfig.url}/services`,
   )
   const faqSchema = generateFaqSchema(faqItems)
 

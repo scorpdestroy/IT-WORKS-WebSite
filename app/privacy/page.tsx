@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { Section } from "@/components/sections/section"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Политика конфиденциальности",
-  description: "Политика конфиденциальности IT Works. Информация о сборе, обработке и защите персональных данных.",
+  description: `Политика конфиденциальности ${siteConfig.name}. Информация о сборе, обработке и защите персональных данных.`,
 }
 
 export default function PrivacyPage() {
@@ -20,7 +21,7 @@ export default function PrivacyPage() {
           </h2>
           <p>
             Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты
-            персональных данных пользователей сайта itworks.consulting (далее — «Сайт»), принадлежащего IT Works (далее
+            персональных данных пользователей сайта {new URL(siteConfig.url).host} (далее — «Сайт»), принадлежащего {siteConfig.name} (далее
             — «Компания», «мы»).
           </p>
           <p>
@@ -106,8 +107,8 @@ export default function PrivacyPage() {
           </ul>
           <p>
             Для реализации своих прав обратитесь к нам по электронной почте:{" "}
-            <a href="mailto:privacy@itworks.consulting" className="text-foreground underline">
-              privacy@itworks.consulting
+            <a href={`mailto:${siteConfig.privacyEmail}`} className="text-foreground underline">
+              {siteConfig.privacyEmail}
             </a>
           </p>
 
@@ -126,11 +127,11 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 space-y-2">
             <li>
               Email:{" "}
-              <a href="mailto:privacy@itworks.consulting" className="text-foreground underline">
-                privacy@itworks.consulting
+              <a href={`mailto:${siteConfig.privacyEmail}`} className="text-foreground underline">
+                {siteConfig.privacyEmail}
               </a>
             </li>
-            <li>Телефон: +7 (495) 123-45-67</li>
+            <li>Телефон: {siteConfig.phone}</li>
           </ul>
         </div>
       </article>

@@ -137,7 +137,7 @@ export default function AutomationPage() {
   const serviceSchema = generateServiceSchema(
     "Автоматизация и внедрение",
     "Автоматизация бизнес-процессов: заявки, согласования, контроль исполнения, интеграции",
-    "https://itworks.consulting/services/automation",
+    `${siteConfig.url}/services/automation`,
   )
   const faqSchema = generateFaqSchema(faqItems)
 

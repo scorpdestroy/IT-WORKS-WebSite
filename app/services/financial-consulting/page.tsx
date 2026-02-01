@@ -123,7 +123,7 @@ export default function FinancialConsultingPage() {
   const serviceSchema = generateServiceSchema(
     "Финансовый консалтинг",
     "Построение системы управленческого учёта, бюджетирование, финансовое моделирование и CFO-поддержка",
-    "https://itworks.consulting/services/financial-consulting",
+    `${siteConfig.url}/services/financial-consulting`,
   )
 
   return (

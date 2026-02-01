@@ -3,8 +3,8 @@ import { Mail, Phone, Send } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
 
 const legalLinks = [
-  { name: "Политика конфиденциальности", href: "/privacy" },
-  { name: "Обработка персональных данных", href: "/data-processing" },
+  { name: "Политика конфиденциальности", href: siteConfig.routes.privacy },
+  { name: "Обработка персональных данных", href: siteConfig.routes.dataProcessing },
   { name: "Cookies", href: "/cookies" },
 ]
 

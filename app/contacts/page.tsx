@@ -4,12 +4,13 @@ import { Section } from "@/components/sections/section"
 import { LeadForm } from "@/components/forms/lead-form"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Phone, Send, Clock } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Контакты",
-  description: "Свяжитесь с IT Works для обсуждения вашего проекта. Email, телефон, Telegram. Отвечаем в течение дня.",
+  description: "Свяжитесь с нами для обсуждения вашего проекта. Email, телефон, Telegram. Отвечаем в течение дня.",
   openGraph: {
-    title: "Контакты | IT Works",
+    title: `Контакты | ${siteConfig.name}`,
     description: "Свяжитесь с нами для обсуждения проекта финансового консалтинга или автоматизации.",
   },
 }
@@ -18,22 +19,22 @@ const contacts = [
   {
     icon: Mail,
     title: "Email",
-    value: "info@itworks.consulting",
-    href: "mailto:info@itworks.consulting",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
     description: "Для деловой переписки и документов",
   },
   {
     icon: Phone,
     title: "Телефон",
-    value: "+7 (495) 123-45-67",
-    href: "tel:+74951234567",
-    description: "Пн-Пт с 10:00 до 19:00 МСК",
+    value: siteConfig.phone,
+    href: `tel:${siteConfig.phoneRaw}`,
+    description: siteConfig.workingHours,
   },
   {
     icon: Send,
     title: "Telegram",
-    value: "@itworks_consulting",
-    href: "https://t.me/itworks_consulting",
+    value: siteConfig.telegram,
+    href: siteConfig.telegramUrl,
     description: "Быстрые вопросы и оперативная связь",
   },
 ]
