@@ -42,7 +42,7 @@ const env = {
   faviconPath: process.env.NEXT_PUBLIC_FAVICON_PATH,
 } as const
 
-const fallbackSiteUrl = "https://example.com"
+const fallbackSiteUrl = "https://it-works.su"
 
 export const siteConfig = {
   // URLs
@@ -56,27 +56,27 @@ export const siteConfig = {
   // Company / legal
   legalName: env.legalName || 'ООО "АйТи Воркс"',
   shortName: env.shortName || env.legalName || 'ООО "АйТи Воркс"',
-  inn: env.inn || "0000000000",
-  kpp: env.kpp || "000000000",
+  inn: env.inn || "7714484889",
+  kpp: env.kpp || "771401001",
   ogrn: env.ogrn || "0000000000000",
   ceoName: env.ceoName || "",
   legalAddress: env.legalAddress || "",
   postalAddress: env.postalAddress || "",
 
   // Contacts
-  email: env.contactEmail || "hello@example.com",
-  privacyEmail: env.contactPrivacyEmail || env.contactEmail || "privacy@example.com",
-  phone: env.contactPhone || "+7 (000) 000-00-00",
-  phoneRaw: env.contactPhoneRaw || "+70000000000",
-  telegram: env.telegramHandle || "@itworks_support",
-  telegramUrl: env.telegramUrl || "https://t.me/itworks_support",
+  email: env.contactEmail || "it.works24@yandex.ru",
+  privacyEmail: env.contactPrivacyEmail || env.contactEmail || "it.works24@yandex.ru",
+  phone: env.contactPhone || "+7 (962) 138-07-67",
+  phoneRaw: env.contactPhoneRaw || "+79621380767",
+  telegram: env.telegramHandle || "@itworks_support_bot",
+  telegramUrl: env.telegramUrl || "https://t.me/itworks_support_bot",
   workingHours: env.contactWorkHours || "Пн–Пт 10:00–19:00 (МСК)",
 
   // Address / geography
   city: env.contactCity || "Москва",
   country: env.contactCountry || "Россия",
   region: env.contactRegion || "Россия / СНГ",
-  address: env.contactAddress || "",
+  address: env.contactAddress || "2-й Хорошевский пр, д. 7, стр. 14",
 
   // Routes
   routes: {
@@ -86,7 +86,7 @@ export const siteConfig = {
 
   // Social/external links
   social: {
-    telegram: env.telegramUrl || "https://t.me/itworks_support",
+    telegram: env.telegramUrl || "https://t.me/itworks_support_bot",
     whatsapp: env.whatsappUrl || "",
     vk: env.vkUrl || "",
     linkedin: env.linkedinUrl || "",
